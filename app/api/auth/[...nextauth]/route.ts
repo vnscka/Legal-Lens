@@ -7,7 +7,7 @@ import GoogleProvider from "next-auth/providers/google"
 const baseUrl =
   process.env.NEXTAUTH_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
 
-const handler = NextAuth({
+export const authOptions = {
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID || "",
@@ -58,7 +58,9 @@ const handler = NextAuth({
   },
   // Add debug mode in development to help troubleshoot
   debug: process.env.NODE_ENV === "development",
-})
+}
+
+const handler = NextAuth(authOptions)
 
 export { handler as GET, handler as POST }
 

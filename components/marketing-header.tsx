@@ -12,7 +12,7 @@ export default function MarketingHeader() {
     <header className="sticky top-0 z-50 w-full border-b bg-white">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center">
-          <Link href="/" className="flex items-center">
+          <Link href="/landing" className="flex items-center">
             <div className="h-8 w-8 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold mr-2">
               L
             </div>
